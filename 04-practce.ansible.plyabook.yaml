@@ -9,4 +9,4 @@
     - name: stop the nignx
       ansible.builtin.service:
         name: nginx
-        state: stop
+        state: stopped
