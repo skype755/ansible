@@ -10,6 +10,6 @@
   hosts: local
   connection: local# managing its own node no need of credentials
   tasks:
-  - name: play2 and task2
+  - name: play2 and task1
     ansible.builtin.debug:
-      msg: "hello from play2 and task2"
+      msg: "hello from play2 and task1"
