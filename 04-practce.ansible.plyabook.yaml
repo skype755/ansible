@@ -5,7 +5,7 @@
     - name: uninstall nginx server
       ansible.builtin.package:
         name: nginx
-        state: abscent
+        state: absent
     - name: stop the nignx
       ansible.builtin.service:
         name: nginx
