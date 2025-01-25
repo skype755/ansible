@@ -12,15 +12,15 @@
 #         state: stopped
 
 
-- name: install and run apache server
+- name: install and start apache server
   hosts: web
   become: yes
   tasks:
-    - name: install and run apache
+    - name: install apache server
       ansible.builtin.package:
         name: apache server
         state: installed
-    - name: start the apache 
+    - name: start the apache server
       ansible.builtin.service:
         name: apache server
         state: started
