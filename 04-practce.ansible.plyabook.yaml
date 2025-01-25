@@ -1,12 +1,26 @@
-- name: uninstall nginx
+# - name: uninstall nginx
+#   hosts: web
+#   become: yes
+#   tasks: 
+#     - name: uninstall nginx server
+#       ansible.builtin.package:
+#         name: nginx
+#         state: absent
+#     - name: stop the nignx
+#       ansible.builtin.service:
+#         name: nginx
+#         state: stopped
+
+
+- name: install and run apache server
   hosts: web
   become: yes
-  tasks: 
-    - name: uninstall nginx server
+  tasks:
+    - name: install and run apache
       ansible.builtin.package:
-        name: nginx
-        state: absent
-    - name: stop the nignx
+        name: apache server
+        state: installed
+    - name: start the apache 
       ansible.builtin.service:
-        name: nginx
-        state: stopped
+        name: apache server
+        state: started
