@@ -8,6 +8,7 @@
     prompt: please enter duration
   - name: TRAINER
     prompt: please trainer name
+    private: false # its not confidential
   tasks:
     - name: print course information
       ansible.builtin.debug:
