@@ -1,5 +1,6 @@
 - name: variables from files
   hosts: localhost
+  connection: true
   tasks:
   - name: 
     ansible.builtin.debug:
