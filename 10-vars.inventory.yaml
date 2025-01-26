@@ -1,6 +1,6 @@
 - name: variables from files
-  hosts: localhost
-  connection: local
+  hosts: web
+  connection: web
   tasks:
   - name: print course information
     ansible.builtin.debug:
