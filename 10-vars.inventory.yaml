@@ -1,5 +1,5 @@
 - name: variables from inventory
-  hosts: localhost
+  hosts: local
   connection: localhost
   tasks:
   - name: print course information
