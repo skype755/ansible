@@ -2,6 +2,6 @@
   hosts: web
   become: yes 
   tasks:
-  - name: print course information
+  - name: print the server and pass the variables
     ansible.builtin.debug:
       msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
