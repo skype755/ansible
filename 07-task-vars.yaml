@@ -2,7 +2,7 @@
   hosts: localhost
   connection: localhost
   vars: # play level variables
-    COURSE: Devops with aws
+    COURSE: "Devops with aws"
     DURATION: 120hrs
     TRAINER: Sai
   tasks:
