@@ -1,6 +1,6 @@
 - name: variables from inventory
-  hosts: local
-  connection: local
+  hosts: localhost
+  connection: localhost
   tasks:
   - name: print course information
     ansible.builtin.debug:
