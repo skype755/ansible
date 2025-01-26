@@ -1,5 +1,5 @@
 - name: variables
-  hosts: local
+  hosts: localhost
   connection: local
   vars: # play level variables
     COURSE: "Devops with aws"
