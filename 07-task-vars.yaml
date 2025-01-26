@@ -1,6 +1,6 @@
 - name: variables
   hosts: localhost
-  connection: local
+  connection: localhost
   vars: # play level variables
     COURSE: "Devops with aws"
     DURATION: "120hrs"
