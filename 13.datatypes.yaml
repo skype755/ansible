@@ -11,11 +11,11 @@
     - aws
     live: true # boolean true or false
     tools: # map having key value plairs
-       ci: jenkins
+      ci: jenkins
       cloud: aws
       containerization: docker
-    tasks:
-    - name: print course information
-      ansible.builtin.debug:
+  tasks:
+  - name: print course information
+    ansible.builtin.debug:
         msg: "Hello i am learning {{ course_name }}, duration: {{ duration }}, topics are: {{ topics }},
         live classes: {{ live }}, tools covered: {{ tools }}"
