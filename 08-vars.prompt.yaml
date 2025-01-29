@@ -2,10 +2,11 @@
   hosts: localhost
   connection: localhost
   vars_prompt:
-  private: false
   - name: COURSE
+  private: false
     prompt: please enter course name
   - name: DURATION
+  private: false
     prompt: please enter duration
   - name: TRAINER
     prompt: please enter trainer name
