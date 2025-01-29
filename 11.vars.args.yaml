@@ -1,7 +1,7 @@
-- name: pass arguments from command line 
+- name: variables
   hosts: localhost
   connection: localhost
   tasks:
-  - name: pass the argumnets
+  - name: print the variables
     ansible.builtin.debug:
       msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
