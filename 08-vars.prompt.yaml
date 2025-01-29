@@ -2,6 +2,7 @@
   hosts: localhost
   connection: localhost
   vars_prompt:
+  private: false
   - name: COURSE
     prompt: please enter course name
   - name: DURATION
