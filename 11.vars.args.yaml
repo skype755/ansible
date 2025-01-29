@@ -1,0 +1,7 @@
+- name: variables from argumants form command line 
+  hosts: localhost
+  connection: localhost
+  tasks:
+  - name: print the variables
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
