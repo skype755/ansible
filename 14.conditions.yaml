@@ -9,7 +9,7 @@
       msg: "Given number {{ given_number }} is greater than 10"
     when: given_number > 10
   
-   - name: print if the number is less than are equal to 10
+  - name: print if the number is less than are equal to 10
     ansible.builtin.debug:
       msg: "Given number {{ given_number }} is less than are equal to 10"
     when: given_number <= 10
