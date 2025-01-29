@@ -3,12 +3,12 @@
   connection: localhost
   vars: # play level variables
    GREET: "play"
-   vars_files:
-   - vars.yaml
-   vars_prompt:
-   - name: GREET
-   prompt: enter the value
-   private: false
+  vars_files:
+  - vars.yaml
+  vars_prompt:
+  - name: GREET
+    prompt: enter the value
+    private: false
   tasks:
     - name: print the variables
       # vars:
