@@ -1,26 +1,41 @@
-# - name: uninstall nginx
+- name: PLAY1
+  hosts: local
+  connection: local # managing its own node
+  tasks:
+    - name: PLAY1 and TASK1
+      ansible.builtin.debug:
+        msg: "hello from PLAY1 and TASK1"
+
+- name: PLAY2
+  hosts: local
+  connection: local # managing its own node
+  tasks:
+    - name: PLAY2 and TASK1
+      ansible.builtin.debug:
+        msg: "hello from PLAY2 and TASK1"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - name: install and start apache server
 #   hosts: web
 #   become: yes
-#   tasks: 
-#     - name: uninstall nginx server
+#   tasks:
+#     - name: install apache server
 #       ansible.builtin.package:
-#         name: nginx
-#         state: absent
-#     - name: stop the nignx
+#         name: apache server
+#         state: installed
+#     - name: start the apache server
 #       ansible.builtin.service:
-#         name: nginx
-#         state: stopped
-
-
-- name: install and start apache server
-  hosts: web
-  become: yes
-  tasks:
-    - name: install apache server
-      ansible.builtin.package:
-        name: apache server
-        state: installed
-    - name: start the apache server
-      ansible.builtin.service:
-        name: apache server
-        state: started
+#         name: apache server
+#         state: started
