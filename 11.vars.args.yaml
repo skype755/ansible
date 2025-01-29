@@ -1,4 +1,4 @@
-- name: variables from argumants form command line 
+- name: pass arguments from command line 
   hosts: localhost
   connection: localhost
   tasks:
