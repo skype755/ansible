@@ -5,11 +5,10 @@
   tasks:
   - name: install packages
     ansible.builtin.package:
-    ansible.builtin.service:
       name: "{{ item.name }}"
       state: "{{ item.state }}"
     loop:
     - { name: 'git', state: 'absent'}
     - { name: 'mysql', state: 'absent'}
     - { name: 'gcc', state: 'present'}
-    - { name: 'Nginx', state: 'present'}
+    
