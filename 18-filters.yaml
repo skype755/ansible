@@ -4,4 +4,4 @@
   tasks:
     - name: handle undefined variable
       ansible.builtin.package:
-        msg: "hello {{ person }}"
+        msg: "hello {{ person | default('sai') }}"
