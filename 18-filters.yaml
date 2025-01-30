@@ -1,0 +1,7 @@
+- name: filters
+  hosts: localhost
+  connection: localhost
+  tasks:
+    - name: handle undefined variable
+      ansible.builtin.package:
+        msg: "hello {{ person }}"
