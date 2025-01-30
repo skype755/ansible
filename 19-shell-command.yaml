@@ -8,9 +8,53 @@
 
     - name: execute is command
       #ansible.builtin.command: ls -ltr > /tmp/output.txt
-      ansible.builtin.command: ls -ltr 
+      ansible.builtin.command: ls -ltrtt
       register: command_result
 
     - name: print the output
       ansible.builtin.debug:
         msg: "{{ command_result }}"
+
+#   ok: [localhost] => {
+#     "msg": {
+#         "changed": true,
+#         "cmd": [
+#             "ls",
+#             "-ltr"
+#         ],
+#         "delta": "0:00:00.004983",
+#         "end": "2025-01-30 23:49:38.880432",
+#         "failed": false,
+#         "msg": "",
+#         "rc": 0,
+#         "start": "2025-01-30 23:49:38.875449",
+#         "stderr": "",
+#         "stderr_lines": [],
+#         "stdout": "total 84\n-rw-r--r-- 1 ec2-user ec2-user  286 Jan 29 09:35 03-plyabook.nginx.yaml\n-rw-r--r-- 1 ec2-user ec2-user  128 Jan 29 09:35 02-playbook.yaml\n-rw-r--r-- 1 ec2-user ec2-user  113 Jan 29 09:35 01-playbook.yaml\n-rw-r--r-- 1 ec2-user ec2-user  728 Jan 29 09:40 04-practce.ansible.plyabook.yaml\n-rw-r--r-- 1 ec2-user ec2-user  321 Jan 29 09:59 05-vars.yaml\n-rw-r--r-- 1 ec2-user ec2-user  640 Jan 29 10:12 06-task-vars.yaml\n-rw-r--r-- 1 ec2-user ec2-user  265 Jan 29 10:13 07vars.files.yaml\n-rw-r--r-- 1 ec2-user ec2-user  470 Jan 29 10:20 08-vars.prompt.yaml\n-rw-r--r-- 1 ec2-user ec2-user  237 Jan 29 10:24 09-vars.inventory.yaml\n-rw-r--r-- 1 ec2-user ec2-user  216 Jan 29 10:35 10-vars.inventory.yaml\n-rw-r--r-- 1 ec2-user ec2-user  217 Jan 29 12:45 11.vars.args.yaml\n-rw-r--r-- 1 ec2-user ec2-user  402 Jan 29 13:04 inventory.ini\n-rw-r--r-- 1 ec2-user ec2-user   73 Jan 29 13:14 vars.yaml\n-rw-r--r-- 1 ec2-user ec2-user  376 Jan 29 13:22 12.vars.preference.yaml\n-rw-r--r-- 1 ec2-user ec2-user  621 Jan 29 15:02 13.datatypes.yaml\n-rw-r--r-- 1 ec2-user ec2-user  477 Jan 29 15:13 14.conditions.yaml\n-rw-r--r-- 1 ec2-user ec2-user  190 Jan 30 22:43 15.loops.yaml\n-rw-r--r-- 1 ec2-user ec2-user  264 Jan 30 22:46 16-loops.yaml\n-rw-r--r-- 1 ec2-user ec2-user  340 Jan 30 22:54 17-loops.yaml\n-rw-r--r-- 1 ec2-user ec2-user 1516 Jan 30 23:29 18-filters.yaml\n-rw-r--r-- 1 ec2-user ec2-user  476 Jan 30 23:49 19-shell-command.yaml",
+#         "stdout_lines": [
+#             "total 84",
+#             "-rw-r--r-- 1 ec2-user ec2-user  286 Jan 29 09:35 03-plyabook.nginx.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  128 Jan 29 09:35 02-playbook.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  113 Jan 29 09:35 01-playbook.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  728 Jan 29 09:40 04-practce.ansible.plyabook.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  321 Jan 29 09:59 05-vars.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  640 Jan 29 10:12 06-task-vars.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  265 Jan 29 10:13 07vars.files.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  470 Jan 29 10:20 08-vars.prompt.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  237 Jan 29 10:24 09-vars.inventory.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  216 Jan 29 10:35 10-vars.inventory.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  217 Jan 29 12:45 11.vars.args.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  402 Jan 29 13:04 inventory.ini",
+#             "-rw-r--r-- 1 ec2-user ec2-user   73 Jan 29 13:14 vars.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  376 Jan 29 13:22 12.vars.preference.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  621 Jan 29 15:02 13.datatypes.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  477 Jan 29 15:13 14.conditions.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  190 Jan 30 22:43 15.loops.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  264 Jan 30 22:46 16-loops.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  340 Jan 30 22:54 17-loops.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user 1516 Jan 30 23:29 18-filters.yaml",
+#             "-rw-r--r-- 1 ec2-user ec2-user  476 Jan 30 23:49 19-shell-command.yaml"
+#         ]
+#     }
+# }
+
