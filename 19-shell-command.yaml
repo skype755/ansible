@@ -3,4 +3,14 @@
   connection: localhost
   tasks:
     - name: execute is command
+      #ansible.builtin.command: ls -ltr > /tmp/output.txt
       ansible.builtin.shell: ls -ltr > /tmp/output.txt
+
+    - name: execute is command
+      #ansible.builtin.command: ls -ltr > /tmp/output.txt
+      ansible.builtin.command: ls -ltr 
+      register: command_result
+
+    - name: print the output
+      ansible.builtin.debug:
+        msg: "{{ command_result }}"
