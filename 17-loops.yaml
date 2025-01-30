@@ -5,6 +5,7 @@
   tasks:
   - name: install packages
     ansible.builtin.package:
+    ansible.builtin.service:
       name: "{{ item.name }}"
       state: "{{ item.state }}"
     loop:
