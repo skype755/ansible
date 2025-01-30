@@ -3,5 +3,5 @@
   connection: localhost
   tasks:
     - name: handle undefined variable
-      ansible.builtin.package:
+      ansible.builtin.debug:
         msg: "hello {{ person | default('sai')}}"
