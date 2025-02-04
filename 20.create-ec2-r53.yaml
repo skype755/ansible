@@ -2,6 +2,7 @@
   hosts: localhost
   connection: localhost
   vars:
+    vpc_id: vpc-0385b948045cf5a37 
     subnet_id: subnet-0270c21a623755744
     sg_id: sg-01076ba01e673e877 
     ami_id: ami-09c813fb71547fc4f
@@ -22,6 +23,7 @@
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
+      vpc_id: "{{ vpc_id }}"
       subnet_id: "{{ subnet_id }}"
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
