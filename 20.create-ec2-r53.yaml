@@ -11,6 +11,13 @@
     - frontend
     - backend
   tasks:
+  - name: install mysql libraries
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3.9
+    loop:
+    - boto3
+    - PyMySQL
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
