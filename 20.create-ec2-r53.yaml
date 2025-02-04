@@ -8,8 +8,8 @@
     instance_type: t3.micro
     instances:
     - mysql
-    - frontend
     - backend
+    - frontend
   tasks:
   - name: install mysql libraries
     ansible.builtin.pip:
