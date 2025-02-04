@@ -26,6 +26,5 @@
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
       instance_id: "{{ instance_type }}"
-      region: us-east-1
     loop: "{{ instances }}"
     
