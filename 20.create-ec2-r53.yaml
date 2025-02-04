@@ -21,7 +21,8 @@
 
   - name: create ec2 instances
     amazon.aws.ec2_instance:
-      instance_type: var.instance_type
+      subnet_id: "{{ subnet_id }}"
+      instance_type: "{{ instance_type }}"
       name: "{{ item }}"
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
