@@ -2,6 +2,7 @@
   hosts: localhost
   connection: localhost
   vars: 
+    subnet_id: subnet-0270c21a623755744
     sg_id: sg-01076ba01e673e877 
     ami_id: ami-09c813fb71547fc4f
     instance_type: t2.micro
