@@ -1,6 +1,0 @@
-- name: install nginx
-  hosts: localhost
-  connection: localhost
-  become: yes
-  roles:
-  - frontend
