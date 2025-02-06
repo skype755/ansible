@@ -1,9 +1,0 @@
-- name: install nginx
-  ansible.builtin.package:
-      name: nginx
-      state: installed
-- name: start the nginx
-  ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes
